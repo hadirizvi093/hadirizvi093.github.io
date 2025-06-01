@@ -1,31 +1,21 @@
-// Simple client-side form validation & feedback
+// main.js
 
 document.getElementById('contactForm').addEventListener('submit', function (e) {
   e.preventDefault();
-
-  const name = this.name.value.trim();
-  const email = this.email.value.trim();
-  const message = this.message.value.trim();
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
   const formMessage = document.getElementById('formMessage');
 
   if (!name || !email || !message) {
+    formMessage.textContent = 'Please fill in all required fields.';
     formMessage.style.color = 'red';
-    formMessage.textContent = 'Please fill out all fields.';
     return;
   }
 
-  // Simple email format check
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-    formMessage.style.color = 'red';
-    formMessage.textContent = 'Please enter a valid email address.';
-    return;
-  }
-
-  // In real agency site, here you would send form data to backend or email API.
-  // For now, just show success message and reset form.
-
+  formMessage.textContent = 'Thank you for contacting us! We will get back to you shortly.';
   formMessage.style.color = 'green';
-  formMessage.textContent = 'Thank you! We will get back to you soon.';
+
+  // Reset the form (simulate submission)
   this.reset();
 });
