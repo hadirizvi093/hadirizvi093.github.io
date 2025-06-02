@@ -1,51 +1,38 @@
-// Dark/Light mode toggle using localStorage
-const themeToggle = document.getElementById('themeToggle');
-const html = document.documentElement;
+// Theme toggle and scroll animation logic
 
-// Set initial theme
-if (localStorage.getItem('theme') === 'light') {
-  html.classList.remove('dark');
-} else {
-  html.classList.add('dark');
-}
+document.addEventListener('DOMContentLoaded', () => {
+  // Theme toggle button
+  const themeToggle = document.getElementById('themeToggle');
+  const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const savedTheme = localStorage.getItem('theme');
 
-// Toggle theme on click
-if (themeToggle) {
+  if (savedTheme === 'light') {
+    document.documentElement.classList.add('light');
+  } else if (!savedTheme && userPrefersDark) {
+    document.documentElement.classList.remove('light');
+  }
+
   themeToggle.addEventListener('click', () => {
-    if (html.classList.contains('dark')) {
-      html.classList.remove('dark');
+    document.documentElement.classList.toggle('light');
+    if (document.documentElement.classList.contains('light')) {
       localStorage.setItem('theme', 'light');
     } else {
-      html.classList.add('dark');
       localStorage.setItem('theme', 'dark');
     }
   });
-}
 
-// Scroll-triggered animations using IntersectionObserver
-const fadeElems = document.querySelectorAll('.fade-in');
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('animate-fadeInUp');
-      observer.unobserve(entry.target);
-    }
-  });
-}, {
-  threshold: 0.1,
-});
-
-fadeElems.forEach(el => observer.observe(el));
-
-// Smooth scrolling for anchor links
-const navLinks = document.querySelectorAll('a[href^="#"]');
-navLinks.forEach(link => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-    document.querySelector(link.getAttribute('href'))?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
+  // Scroll-triggered fade-in animation
+  const faders = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
     });
+  }, { threshold: 0.1 });
+
+  faders.forEach(fade => {
+    observer.observe(fade);
   });
 });
