@@ -3,156 +3,104 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Neuorial - AI Automation Agency for Businesses" />
-  <meta name="keywords" content="AI automation, business automation, workflow automation, AI chatbot, Neuorial" />
-  <meta property="og:title" content="Neuorial | AI Automation Agency" />
-  <meta property="og:description" content="Streamline your business with Neuorial's AI-powered solutions." />
-  <meta property="og:url" content="https://neuorial.tech" />
+  <meta name="description" content="Neuorial - AI Automation Agency" />
+  <meta name="keywords" content="AI automation, AI chatbots, workflow automation, data bots" />
+  <meta name="author" content="Neuorial" />
+  <meta property="og:title" content="Neuorial | AI Automation Experts" />
+  <meta property="og:description" content="Futuristic AI solutions for modern businesses." />
   <meta property="og:type" content="website" />
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <title>Neuorial | AI Automation Experts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
-  <title>Neuorial | AI Automation Agency</title>
 </head>
-<body>
-  <header class="sticky-header">
-    <div class="container nav-container">
-      <a href="#home" class="logo">
-  <img src="neuorial-logo.png" alt="Neuorial Logo" />
-</a>
-      <nav aria-label="Main navigation">
-        <ul class="nav-menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Case Studies</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+<body class="dark">
+  <header class="header">
+    <div class="container">
+      <div class="nav">
+        <a href="#" class="logo">Neuorial</a>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><button id="themeToggle">🌙</button></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 
-  <main>
-    <section id="home" class="hero">
-      <div class="container">
-        <h2>AI-Powered Automation for Modern Businesses</h2>
-        <p>Neuorial helps businesses streamline operations, save time, and increase productivity using intelligent automation solutions.</p>
-        <a href="#contact" class="btn primary">Get a Free Quote</a>
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content" data-aos="fade-up">
+        <h1>Smarter Business. Automated by AI.</h1>
+        <p>Neuorial helps teams automate workflows and gain superpowers with intelligent systems built for modern business.</p>
+        <a href="#contact" class="cta-button">Request a Demo</a>
       </div>
-    </section>
+    </div>
+    <div class="hero-background"></div>
+  </section>
 
-    <section id="about" class="about">
-      <div class="container">
-        <h2>About Neuorial</h2>
-        <p>Neuorial was founded with the mission to empower businesses through cutting-edge AI technologies. We specialize in delivering affordable, scalable, and innovative automation solutions tailored for small and medium enterprises.</p>
-        <img src="team-placeholder.jpg" alt="Neuorial Team" class="responsive" />
-      </div>
-    </section>
+  <section class="about" id="about">
+    <div class="container" data-aos="fade-up">
+      <h2>About Neuorial</h2>
+      <p>Neuorial is an AI-first agency focused on redefining how businesses operate. From smart assistants to automated back-office bots, we enable modern companies to scale faster and smarter.</p>
+    </div>
+  </section>
 
-    <section id="services" class="services">
-      <div class="container">
-        <h2>Our Services</h2>
-        <div class="service-list">
-          <div class="service-card">
-            <h3>Workflow Automation</h3>
-            <p>Streamline repetitive tasks to save time and reduce errors across departments.</p>
-          </div>
-          <div class="service-card">
-            <h3>AI Chatbots</h3>
-            <p>24/7 intelligent customer support and engagement using natural language processing.</p>
-          </div>
-          <div class="service-card">
-            <h3>Data Extraction</h3>
-            <p>Automate data scraping, entry, and transformation from any source.</p>
-          </div>
-          <div class="service-card">
-            <h3>Custom AI Solutions</h3>
-            <p>Tailored machine learning models and APIs built to solve your unique business needs.</p>
-          </div>
+  <section class="services" id="services">
+    <div class="container" data-aos="fade-up">
+      <h2>Our Services</h2>
+      <div class="service-cards">
+        <div class="card">
+          <h3>Workflow Automation</h3>
+          <p>Automate recurring business tasks, document flows, and inter-team processes.</p>
         </div>
-        <div class="pricing">
-          <h3>Pricing</h3>
-          <p>Starting at $50/hour or monthly retainers from $500. Flexible plans to suit your project.</p>
+        <div class="card">
+          <h3>AI Chatbots</h3>
+          <p>Deploy intelligent bots to handle support, onboarding, and real-time interactions.</p>
         </div>
-        <div class="faqs">
-          <h3>FAQs</h3>
-          <ul>
-            <li><strong>Q:</strong> What is AI automation? <strong>A:</strong> Using AI tools to automate tasks like customer support, data handling, and more.</li>
-            <li><strong>Q:</strong> How long does it take to deliver a project? <strong>A:</strong> Most projects are completed within 2–6 weeks.</li>
-          </ul>
+        <div class="card">
+          <h3>Data Automation</h3>
+          <p>Extract and transform data with intelligent scripts and auto-dashboards.</p>
+        </div>
+        <div class="card">
+          <h3>Lead Generation Bots</h3>
+          <p>Capture and qualify leads via AI-driven conversations across channels.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="portfolio" class="portfolio">
-      <div class="container">
-        <h2>Case Studies</h2>
-        <div class="case">
-          <h3>RetailBot for XYZ Store</h3>
-          <p><strong>Problem:</strong> 1,000+ customer queries daily.<br><strong>Solution:</strong> AI chatbot deployment.<br><strong>Outcome:</strong> 70% decrease in response time, 40% increased customer satisfaction.</p>
-        </div>
-        <div class="case">
-          <h3>Finance Data Pipeline for AlphaTax</h3>
-          <p><strong>Problem:</strong> Manual data entry errors.<br><strong>Solution:</strong> Custom Python-based data extractor.<br><strong>Outcome:</strong> 99.5% accuracy, 12 hours saved/week.</p>
-        </div>
-        <div class="case">
-          <h3>Workflow Automation for BetaOps</h3>
-          <p><strong>Problem:</strong> Disjointed onboarding process.<br><strong>Solution:</strong> Automated form + email + CRM sync.<br><strong>Outcome:</strong> 60% faster onboarding, 20% HR cost reduction.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="contact">
-      <div class="container">
-        <h2>Contact Us</h2>
-        <form id="contactForm" novalidate>
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required />
-
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required />
-
-          <label for="company">Company</label>
-          <input type="text" id="company" name="company" />
-
-          <label for="service">Service Interested In</label>
-          <select id="service" name="service">
-            <option value="">-- Select --</option>
-            <option value="Workflow Automation">Workflow Automation</option>
-            <option value="AI Chatbots">AI Chatbots</option>
-            <option value="Data Extraction">Data Extraction</option>
-            <option value="Custom AI Solutions">Custom AI Solutions</option>
-          </select>
-
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-
-          <button type="submit" class="btn primary">Send Message</button>
-        </form>
-        <p id="formMessage" aria-live="polite"></p>
-        <div class="contact-info">
-          <p>Email: contact@neuorial.tech</p>
-          <p>Follow us: <a href="#">LinkedIn</a> | <a href="#">Twitter</a></p>
-        </div>
-      </div>
-    </section>
-
-    <section id="blog" class="blog">
-      <div class="container">
-        <h2>Neuorial Blog</h2>
-        <article>
-          <h3>How AI is Transforming Small Businesses</h3>
-          <p>Coming soon: insights on leveraging AI to automate daily operations.</p>
-        </article>
-      </div>
-    </section>
-  </main>
+  <section class="contact" id="contact">
+    <div class="container" data-aos="fade-up">
+      <h2>Get in Touch</h2>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
 
   <footer class="footer">
     <div class="container">
       <p>&copy; 2025 Neuorial. All rights reserved.</p>
+      <div class="socials">
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter</a>
+        <a href="#">GitHub</a>
+      </div>
     </div>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="js/main.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>
