@@ -1,33 +1,39 @@
-// js/main.js
+// Dark/Light mode toggle using localStorage
+const themeToggle = document.getElementById('themeToggle');
+const html = document.documentElement;
 
-// Theme toggle
-const toggle = document.getElementById('themeToggle');
-const body = document.body;
-
-// Load saved theme
+// Set initial theme
 if (localStorage.getItem('theme') === 'light') {
-  body.classList.add('light-mode');
-  toggle.textContent = '☀️';
+  html.classList.remove('dark');
+} else {
+  html.classList.add('dark');
 }
 
-// Toggle between light and dark
-toggle.addEventListener('click', () => {
-  body.classList.toggle('light-mode');
-  const isLight = body.classList.contains('light-mode');
-  localStorage.setItem('theme', isLight ? 'light' : 'dark');
-  toggle.textContent = isLight ? '☀️' : '🌙';
+// Toggle theme on click
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    if (html.classList.contains('dark')) {
+      html.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    } else {
+      html.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    }
+  });
+}
+
+// Scroll-triggered animations using IntersectionObserver
+const fadeElems = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate-fadeInUp');
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.1,
 });
 
-// AOS animation init
-AOS.init({
-  duration: 800,
-  easing: 'ease-in-out',
-  once: true,
-});
-
-// Simple contact form alert
-document.getElementById('contactForm').addEventListener('submit', function (e) {
-  e.preventDefault();
-  alert('✅ Thank you! We will get back to you shortly.');
-  this.reset();
-});
+fadeElems.forEach(el => observer.observe(el));
