@@ -1,3 +1,4 @@
+```css
 /* CSS file path: /css/style.css */
 
 /* Reset and Base Styles */
@@ -63,7 +64,8 @@ body {
 .logo {
     display: flex;
     align-items: center;
-    gap: 12px;
+    /* Adjusted gap as text is now part of the image */
+    gap: 0px; 
     text-decoration: none;
     color: #f0f6fc;
     font-size: 20px;
@@ -74,6 +76,14 @@ body {
 .logo:hover {
     opacity: 0.8;
 }
+
+/* New style for the Neuorial logo image */
+.neuorial-logo {
+    height: 40px; /* Adjust height as needed */
+    width: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures it behaves like a block element for sizing */
+}
+
 
 .nav-links {
     display: flex;
@@ -577,7 +587,6 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 24px;
     color: white;
 }
 
