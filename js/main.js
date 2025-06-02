@@ -1,38 +1,53 @@
-// Theme toggle and scroll animation logic
+document.addEventListener("DOMContentLoaded", () => {
+  // Theme toggle
+  const themeToggle = document.getElementById("themeToggle");
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const savedTheme = localStorage.getItem("theme");
 
-document.addEventListener('DOMContentLoaded', () => {
-  // Theme toggle button
-  const themeToggle = document.getElementById('themeToggle');
-  const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const savedTheme = localStorage.getItem('theme');
-
-  if (savedTheme === 'light') {
-    document.documentElement.classList.add('light');
-  } else if (!savedTheme && userPrefersDark) {
-    document.documentElement.classList.remove('light');
+  if (savedTheme === "light") {
+    document.documentElement.classList.add("light");
+  } else if (!savedTheme && prefersDark) {
+    document.documentElement.classList.remove("light");
   }
 
-  themeToggle.addEventListener('click', () => {
-    document.documentElement.classList.toggle('light');
-    if (document.documentElement.classList.contains('light')) {
-      localStorage.setItem('theme', 'light');
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      document.documentElement.classList.toggle("light");
+      const newTheme = document.documentElement.classList.contains("light") ? "light" : "dark";
+      localStorage.setItem("theme", newTheme);
+    });
+  }
+
+  // Navbar scroll effect
+  const navbar = document.querySelector(".navbar");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 10) {
+      navbar.classList.add("scrolled");
     } else {
-      localStorage.setItem('theme', 'dark');
+      navbar.classList.remove("scrolled");
     }
   });
 
-  // Scroll-triggered fade-in animation
-  const faders = document.querySelectorAll('.fade-in');
+  // Animate elements on scroll
+  const animatedEls = document.querySelectorAll(".animate-on-scroll");
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
+        entry.target.classList.add("animated");
         observer.unobserve(entry.target);
       }
     });
   }, { threshold: 0.1 });
 
-  faders.forEach(fade => {
-    observer.observe(fade);
-  });
+  animatedEls.forEach(el => observer.observe(el));
+
+  // Mobile menu toggle
+  const menuBtn = document.querySelector(".mobile-menu-btn");
+  const mobileMenu = document.querySelector(".mobile-menu");
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("show");
+    });
+  }
 });
