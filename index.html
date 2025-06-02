@@ -1,108 +1,501 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Neuorial is a futuristic AI automation agency helping businesses scale with cutting-edge AI solutions.">
-  <meta name="keywords" content="AI, Automation, Workflow, Bots, Neuorial, Machine Learning">
-  <meta property="og:title" content="Neuorial | AI Automation Agency">
-  <meta property="og:description" content="Build intelligent automation workflows for your business with Neuorial.">
-  <meta property="og:type" content="website">
-  <link rel="icon" href="logo.png" type="image/png">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Neuorial | AI Automation Agency</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuorial - AI Automation That Scales Your Business</title>
+    <meta name="description" content="Transform your business with custom AI automation solutions. We build intelligent workflows that save time, reduce costs, and accelerate growth.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="header">
-    <div class="container nav">
-      <a href="#" class="logo">NEUORIAL</a>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#features">Features</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <button id="themeToggle">🌙</button>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="#" class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect width="32" height="32" rx="8" fill="url(#logoGradient)"/>
+                        <path d="M8 12h16v2H8v-2zm0 4h12v2H8v-2zm0 4h8v2H8v-2z" fill="white"/>
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#8b5cf6"/>
+                                <stop offset="100%" stop-color="#3b82f6"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span>Neuorial</span>
+                </a>
+                <div class="nav-links desktop-only">
+                    <a href="#services">Services</a>
+                    <a href="#solutions">Solutions</a>
+                    <a href="#case-studies">Case Studies</a>
+                    <a href="#pricing">Pricing</a>
+                </div>
+            </div>
+            <div class="nav-right">
+                <a href="#contact" class="btn btn-outline">Get Quote</a>
+                <a href="#contact" class="btn btn-primary">Start Project</a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-menu-content">
+                <a href="#services">Services</a>
+                <a href="#solutions">Solutions</a>
+                <a href="#case-studies">Case Studies</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact" class="btn btn-primary mobile-cta">Start Project</a>
+            </div>
+        </div>
+    </nav>
 
-  <section class="hero">
-    <div class="hero-background"></div>
-    <div class="container hero-content fade-in">
-      <h1>Automate Smarter with AI</h1>
-      <p>Neuorial builds powerful AI workflows, bots, and integrations that scale with your business.</p>
-      <a href="#contact" class="cta-button">Get a Free Demo</a>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-icon">⚡</span>
+                    <span>Trusted by 50+ businesses worldwide</span>
+                </div>
+                <h1 class="hero-title">
+                    AI Automation That <span class="gradient-text">Scales Your Business</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Transform your operations with intelligent automation solutions. We build custom AI workflows that eliminate repetitive tasks, reduce costs by up to 70%, and accelerate your growth trajectory.
+                </p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary btn-large">
+                        Start Your Automation Journey
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M8.22 2.97a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.44 8.5H2.75a.75.75 0 0 1 0-1.5h8.69L8.22 4.03a.75.75 0 0 1 0-1.06Z"/>
+                        </svg>
+                    </a>
+                    <a href="#case-studies" class="btn btn-outline btn-large">View Case Studies</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Hours Saved Weekly</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">70%</div>
+                        <div class="stat-label">Cost Reduction</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Automated Operations</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="automation-demo">
+                    <div class="demo-card card-1">
+                        <div class="card-header">
+                            <div class="status-dot active"></div>
+                            <span>Lead Processing</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                            <span class="progress-text">Processing 247 leads...</span>
+                        </div>
+                    </div>
+                    <div class="demo-card card-2">
+                        <div class="card-header">
+                            <div class="status-dot active"></div>
+                            <span>Email Automation</span>
+                        </div>
+                        <div class="card-metrics">
+                            <div class="metric">
+                                <span class="metric-value">98.5%</span>
+                                <span class="metric-label">Delivery Rate</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="demo-card card-3">
+                        <div class="card-header">
+                            <div class="status-dot active"></div>
+                            <span>Data Sync</span>
+                        </div>
+                        <div class="sync-visual">
+                            <div class="sync-dot"></div>
+                            <div class="sync-line"></div>
+                            <div class="sync-dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="features" class="fade-in">
-    <div class="container">
-      <h2>Our AI Capabilities</h2>
-      <div class="service-cards">
-        <div class="card">
-          <h3>Workflow Automation</h3>
-          <p>Automate repetitive processes across tools using intelligent flows.</p>
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our AI Automation Services</h2>
+                <p>From workflow automation to intelligent data processing, we deliver solutions that transform how your business operates.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>Workflow Automation</h3>
+                    <p>Streamline your business processes with intelligent automation that handles repetitive tasks, approvals, and data routing without human intervention.</p>
+                    <div class="service-features">
+                        <span>Process Optimization</span>
+                        <span>Task Automation</span>
+                        <span>Approval Workflows</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 6H3a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1zM5 16V8h2v8H5zm4 0V8h2v8H9zm4 0V8h2v8h-2zm4 0V8h2v8h-2z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>Data Processing Automation</h3>
+                    <p>Transform raw data into actionable insights with AI-powered processing, cleaning, analysis, and intelligent reporting systems.</p>
+                    <div class="service-features">
+                        <span>Data Cleaning</span>
+                        <span>Analytics Automation</span>
+                        <span>Report Generation</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>Customer Service Automation</h3>
+                    <p>Deploy intelligent chatbots and automated support systems that provide instant, accurate responses while seamlessly escalating complex issues.</p>
+                    <div class="service-features">
+                        <span>AI Chatbots</span>
+                        <span>Ticket Automation</span>
+                        <span>24/7 Support</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>Marketing Automation</h3>
+                    <p>Scale your marketing efforts with AI-driven lead nurturing, personalized campaigns, and automated follow-up sequences that convert prospects into customers.</p>
+                    <div class="service-features">
+                        <span>Lead Nurturing</span>
+                        <span>Email Campaigns</span>
+                        <span>Social Media Automation</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>API Integrations</h3>
+                    <p>Connect your business tools and systems with custom API integrations that enable seamless data flow and automated synchronization across platforms.</p>
+                    <div class="service-features">
+                        <span>System Integration</span>
+                        <span>Data Synchronization</span>
+                        <span>Custom APIs</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 11H7v9a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v2z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>Custom AI Solutions</h3>
+                    <p>Get bespoke AI solutions tailored to your unique business challenges, from predictive analytics to intelligent decision-making systems.</p>
+                    <div class="service-features">
+                        <span>Predictive Analytics</span>
+                        <span>Machine Learning</span>
+                        <span>Custom Development</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="card">
-          <h3>AI Chatbots</h3>
-          <p>Handle customer queries 24/7 with smart NLP-based chat agents.</p>
-        </div>
-        <div class="card">
-          <h3>Data & Insight Automation</h3>
-          <p>Extract, analyze and visualize data using tailored AI solutions.</p>
-        </div>
-        <div class="card">
-          <h3>Lead Generation Bots</h3>
-          <p>Build bots that identify and qualify leads autonomously.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="pricing" class="fade-in">
-    <div class="container">
-      <h2>Pricing Plans</h2>
-      <div class="service-cards">
-        <div class="card">
-          <h3>Starter</h3>
-          <p>$99/mo - Ideal for small teams automating simple workflows.</p>
+    <!-- Case Studies Section -->
+    <section class="case-studies" id="case-studies">
+        <div class="container">
+            <div class="section-header">
+                <h2>Success Stories</h2>
+                <p>See how we've helped businesses across industries achieve remarkable results through AI automation.</p>
+            </div>
+            <div class="case-studies-grid">
+                <div class="case-study">
+                    <div class="case-study-header">
+                        <div class="company-info">
+                            <div class="company-logo">E</div>
+                            <div>
+                                <h4>E-commerce Platform</h4>
+                                <span>Retail Industry</span>
+                            </div>
+                        </div>
+                        <div class="case-study-metric">
+                            <span class="metric-value">85%</span>
+                            <span class="metric-label">Cost Reduction</span>
+                        </div>
+                    </div>
+                    <h3>Automated Customer Support & Order Processing</h3>
+                    <p>Implemented AI chatbots and automated order processing workflows that handle 90% of customer inquiries and process orders 24/7, reducing response times from hours to seconds.</p>
+                    <div class="case-study-results">
+                        <div class="result">
+                            <strong>500+</strong>
+                            <span>Daily Orders Processed</span>
+                        </div>
+                        <div class="result">
+                            <strong>24/7</strong>
+                            <span>Customer Support</span>
+                        </div>
+                        <div class="result">
+                            <strong>3 sec</strong>
+                            <span>Average Response Time</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="case-study">
+                    <div class="case-study-header">
+                        <div class="company-info">
+                            <div class="company-logo">M</div>
+                            <div>
+                                <h4>Marketing Agency</h4>
+                                <span>Digital Marketing</span>
+                            </div>
+                        </div>
+                        <div class="case-study-metric">
+                            <span class="metric-value">300%</span>
+                            <span class="metric-label">Lead Increase</span>
+                        </div>
+                    </div>
+                    <h3>Intelligent Lead Qualification & Nurturing</h3>
+                    <p>Built an AI-powered lead scoring system and automated nurturing sequences that qualify leads, personalize outreach, and schedule meetings automatically.</p>
+                    <div class="case-study-results">
+                        <div class="result">
+                            <strong>1,200+</strong>
+                            <span>Qualified Leads/Month</span>
+                        </div>
+                        <div class="result">
+                            <strong>65%</strong>
+                            <span>Conversion Rate</span>
+                        </div>
+                        <div class="result">
+                            <strong>15 hrs</strong>
+                            <span>Saved Daily</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="case-study">
+                    <div class="case-study-header">
+                        <div class="company-info">
+                            <div class="company-logo">F</div>
+                            <div>
+                                <h4>Fintech Startup</h4>
+                                <span>Financial Services</span>
+                            </div>
+                        </div>
+                        <div class="case-study-metric">
+                            <span class="metric-value">99.9%</span>
+                            <span class="metric-label">Accuracy Rate</span>
+                        </div>
+                    </div>
+                    <h3>Automated Financial Data Processing</h3>
+                    <p>Developed intelligent document processing and fraud detection systems that analyze financial documents, extract data, and flag anomalies in real-time.</p>
+                    <div class="case-study-results">
+                        <div class="result">
+                            <strong>10,000+</strong>
+                            <span>Documents Processed Daily</span>
+                        </div>
+                        <div class="result">
+                            <strong>2 min</strong>
+                            <span>Processing Time</span>
+                        </div>
+                        <div class="result">
+                            <strong>$50K</strong>
+                            <span>Monthly Savings</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="card">
-          <h3>Growth</h3>
-          <p>$299/mo - Includes bot building, analytics, and email integrations.</p>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Transparent Pricing</h2>
+                <p>Choose the perfect plan for your automation needs. All plans include ongoing support and optimization.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <div class="price">
+                            <span class="price-amount">$2,500</span>
+                            <span class="price-period">one-time</span>
+                        </div>
+                        <p>Perfect for small businesses looking to automate basic workflows</p>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/>
+                            </svg>
+                            <span>Up to 3 automated workflows</span>
+                        </div>
+                        <div class="feature">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/>
+                            </svg>
+                            <span>Basic integrations (5 apps)</span>
+                        </div>
+                        <div class="feature">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/>
+                            </svg>
+                            <span>Email support</span>
+                        </div>
+                        <div class="feature">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/>
+                            </svg>
+                            <span>30-day optimization period</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-outline btn-full">Get Started</a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Professional</h3>
+                        <div class="price">
+                            <span class="price-amount">$5,000</span>
+                            <span class="price-period">one-time</span>
+                        </div>
+                        <p>Ideal for growing businesses ready to scale their operations</p>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/>
+                            </svg>
+                            <span>Up to 10 automated workflows</span>
+                        </div>
+                        <div class="feature">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/>
+                            </svg>
+                            <span>Advanced integrations (15 apps)</span>
+                        </div>
+                        <div class="feature">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/>
+                            </svg>
+                            <span>Priority support & training</span>
+                        </div>
+                        <div class="feature">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/>
+                            </svg>
+                            <span>60-day optimization period</span>
+                        </div>
+                        <div class="feature">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/>
+                            </svg>
+                            <span>Custom AI chatbot included</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary btn-full">Get Started</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <div class="price">
+                            <span class="price-amount">Custom</span>
+                            <span class="price-period">pricing</span>
+                        </div>
+                        <p>Comprehensive automation solutions for large organizations</p>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/>
+                            </svg>
+                            <span>Unlimited automated workflows</span>
+                        </div>
+                        <div class="feature">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/>
+                            </svg>
+                            <span>Enterprise integrations</span>
+                        </div>
+                        <div class="feature">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/>
+                            </svg>
+                            <span>Dedicated account manager</span>
+                        </div>
+                        <div class="feature">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/>
+                            </svg>
+                            <span>Ongoing optimization</span>
+                        </div>
+                        <div class="feature">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/>
+                            </svg>
+                            <span>Custom AI development</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-outline btn-full">Contact Sales</a>
+                </div>
+            </div>
         </div>
-        <div class="card">
-          <h3>Enterprise</h3>
-          <p>Custom pricing - Full AI stack, support, and on-demand scaling.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact" class="fade-in">
-    <div class="container">
-      <h2>Get in Touch</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Email Address" required>
-        <textarea rows="5" placeholder="Tell us about your project..."></textarea>
-        <button type="submit">Send Inquiry</button>
-      </form>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Neuorial. Built with intelligence.</p>
-      <div class="socials">
-        <a href="#">Twitter</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">GitHub</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
-</body>
-</html>
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Business?</h2>
+                <p>Join hundreds of businesses that have automated their way to success. Get a free consultation and discover how AI automation can accelerate your growth.</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary btn-large">
+                        Start Your Free Consultation
+                        <svg width="16" height="16" viewBox="0 0
