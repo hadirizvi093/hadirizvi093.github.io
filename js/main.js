@@ -1,21 +1,33 @@
-// main.js
+// js/main.js
 
+// Theme toggle
+const toggle = document.getElementById('themeToggle');
+const body = document.body;
+
+// Load saved theme
+if (localStorage.getItem('theme') === 'light') {
+  body.classList.add('light-mode');
+  toggle.textContent = '☀️';
+}
+
+// Toggle between light and dark
+toggle.addEventListener('click', () => {
+  body.classList.toggle('light-mode');
+  const isLight = body.classList.contains('light-mode');
+  localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  toggle.textContent = isLight ? '☀️' : '🌙';
+});
+
+// AOS animation init
+AOS.init({
+  duration: 800,
+  easing: 'ease-in-out',
+  once: true,
+});
+
+// Simple contact form alert
 document.getElementById('contactForm').addEventListener('submit', function (e) {
   e.preventDefault();
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const message = document.getElementById('message').value.trim();
-  const formMessage = document.getElementById('formMessage');
-
-  if (!name || !email || !message) {
-    formMessage.textContent = 'Please fill in all required fields.';
-    formMessage.style.color = 'red';
-    return;
-  }
-
-  formMessage.textContent = 'Thank you for contacting us! We will get back to you shortly.';
-  formMessage.style.color = 'green';
-
-  // Reset the form (simulate submission)
+  alert('✅ Thank you! We will get back to you shortly.');
   this.reset();
 });
