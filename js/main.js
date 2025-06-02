@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Theme toggle
+  // Theme toggle (if needed in the future, currently not exposed in UI)
   const themeToggle = document.getElementById("themeToggle");
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
   const savedTheme = localStorage.getItem("theme");
@@ -20,13 +20,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Navbar scroll effect
   const navbar = document.querySelector(".navbar");
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 10) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
-    }
-  });
+  if (navbar) { // Added check for navbar existence
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 10) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+  }
 
   // Animate elements on scroll
   const animatedEls = document.querySelectorAll(".animate-on-scroll");
@@ -47,7 +49,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (menuBtn && mobileMenu) {
     menuBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("show");
+      mobileMenu.classList.toggle("active");
+      menuBtn.classList.toggle("active"); // Optional: add an active class to button for animation
+    });
+
+    // Close mobile menu when a link is clicked
+    const mobileLinks = mobileMenu.querySelectorAll("a");
+    mobileLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("active");
+        menuBtn.classList.remove("active");
+      });
     });
   }
 });
