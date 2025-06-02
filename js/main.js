@@ -37,3 +37,15 @@ const observer = new IntersectionObserver(entries => {
 });
 
 fadeElems.forEach(el => observer.observe(el));
+
+// Smooth scrolling for anchor links
+const navLinks = document.querySelectorAll('a[href^="#"]');
+navLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.querySelector(link.getAttribute('href'))?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+});
