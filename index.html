@@ -16,17 +16,9 @@
         <div class="nav-container">
             <div class="nav-left">
                 <a href="#" class="logo">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <rect width="32" height="32" rx="8" fill="url(#logoGradient)"/>
-                        <path d="M8 12h16v2H8v-2zm0 4h12v2H8v-2zm0 4h8v2H8v-2z" fill="white"/>
-                        <defs>
-                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#8b5cf6"/>
-                                <stop offset="100%" stop-color="#3b82f6"/>
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                    <span>Neuorial</span>
+                    <!-- Replaced SVG with PNG image logo -->
+                    <img src="images/logo.png" alt="Neuorial Logo" class="neuorial-logo">
+                    <!-- Removed <span>Neuorial</span> as the text is part of the logo image -->
                 </a>
                 <div class="nav-links desktop-only">
                     <a href="#services">Services</a>
@@ -498,4 +490,109 @@
                 <div class="cta-buttons">
                     <a href="#contact" class="btn btn-primary btn-large">
                         Start Your Free Consultation
-                        <svg width="16" height="16" viewBox="0 0
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M8.22 2.97a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.44 8.5H2.75a.75.75 0 0 1 0-1.5h8.69L8.22 4.03a.75.75 0 0 1 0-1.06Z"/>
+                        </svg>
+                    </a>
+                    <a href="#case-studies" class="btn btn-outline btn-large">View Case Studies</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p>Have a project in mind or just want to chat about AI automation? We'd love to hear from you!</p>
+            </div>
+            <div class="contact-container">
+                <form class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company (Optional)</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service of Interest</label>
+                        <select id="service" name="service">
+                            <option value="">Select a Service</option>
+                            <option value="workflow-automation">Workflow Automation</option>
+                            <option value="data-processing">Data Processing Automation</option>
+                            <option value="customer-service">Customer Service Automation</option>
+                            <option value="marketing-automation">Marketing Automation</option>
+                            <option value="api-integrations">API Integrations</option>
+                            <option value="custom-ai">Custom AI Solutions</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Neuorial</h3>
+                    <p>Your partner in AI automation. We build intelligent solutions that drive efficiency, reduce costs, and accelerate business growth.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.37-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.37 7.5 3.44 4.07c-.36.62-.56 1.35-.56 2.13 0 1.49.75 2.81 1.88 3.59-.69-.02-1.34-.21-1.91-.53v.03c0 2.08 1.48 3.82 3.44 4.21-.36.1-.74.15-1.13.15-.28 0-.55-.03-.81-.08.55 1.72 2.14 2.97 4.03 3.01-1.48 1.16-3.35 1.85-5.38 1.85-.35 0-.69-.02-1.03-.06C4.6 20.35 6.9 21 9.42 21c6.53 0 10.09-5.42 10.09-10.19 0-.32-.01-.64-.02-.95.69-.5 1.29-1.12 1.76-1.82z"/></svg></a>
+                        <a href="#" aria-label="LinkedIn"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2" stroke="none" fill="currentColor"/></svg></a>
+                        <a href="#" aria-label="GitHub"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.086 1.838 1.238 1.838 1.238 1.07 1.835 2.809 1.305 3.492.998.108-.776.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1-.322 3.298 1.233 0 0 .93-.257 1.8-.261 0 0 .87.004 1.8.261 2.298-1.555 3.298-1.233 3.298-1.233.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.563 21.838 24 17.347 24 12 24 5.373 18.627 0 12 0z"/></svg></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#case-studies">Case Studies</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">Partnerships</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2025 Neuorial. All rights reserved.</span>
+                <span>Made with ❤️ by Neuorial</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
