@@ -210,7 +210,8 @@ a {
 
 .navbar.scrolled {
     background: rgba(var(--bg-rgb), 0.98);
-    box-shadow: var(--shadow-sm);
+    /* Directly set a neutral shadow to prevent "purple line" */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 body.dark-theme { --bg-rgb: 13, 17, 23; }
 body:not(.dark-theme) { --bg-rgb: 255, 255, 255; }
@@ -399,7 +400,7 @@ body:not(.dark-theme) .gradient-orb { opacity: 0.2; }
 .stat-label { font-size: 0.9rem; color: var(--text-secondary); margin-top: 4px; }
 .hero-visual {
     position: relative;
-    height: 350px;
+    height: 350px; /* Reverted height to original for 3 cards */
     margin-top: 40px;
 }
 .demo-card {
@@ -412,9 +413,12 @@ body:not(.dark-theme) .gradient-orb { opacity: 0.2; }
     animation: cardFloat 8s ease-in-out infinite;
     box-shadow: var(--shadow-sm);
 }
+/* Original positions for the three demo cards */
 .card-1 { top: 0; left: 0; width: 260px; animation-delay: 0s; }
 .card-2 { top: 120px; right: 0; width: 220px; animation-delay: 2.5s; }
 .card-3 { bottom: 0; left: 50%; transform: translateX(-50%); width: 200px; animation-delay: 5s; }
+
+
 @keyframes cardFloat { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-15px); } }
 .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; }
 .status-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--color-success); animation: pulse 2s infinite; }
@@ -743,6 +747,13 @@ body.dark-theme .contact-section { background-color: #11151a; }
     margin-top: 20px; /* Add space above the button */
 }
 
+/* Style for the form submission message */
+#form-message {
+    margin-top: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
 
 /* === FOOTER === */
 .footer {
@@ -780,6 +791,29 @@ body:not(.dark-theme) .footer {
     max-width: 450px;
     font-size: 1rem;
     margin-bottom: 16px;
+}
+
+/* New: Footer contact info styles */
+.footer-contact-info {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-contact-info p {
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+    color: var(--text-color); /* Make this text more prominent */
+}
+
+.footer-email-link {
+    font-weight: 600;
+    color: var(--color-primary-light);
+    text-decoration: underline;
+    transition: color var(--transition-base);
+}
+
+.footer-email-link:hover {
+    color: var(--color-primary-dark);
 }
 
 .footer-nav {
@@ -843,6 +877,12 @@ body:not(.dark-theme) .footer {
     .hero-cta { justify-content: flex-start; }
     .hero-stats { justify-content: flex-start; }
     .hero-visual { order: 1; margin-top: 0; }
+    
+    /* Original positioning for the three demo cards on desktop */
+    .card-1 { top: 0; left: 0; width: 260px; }
+    .card-2 { top: 120px; right: 0; width: 220px; }
+    .card-3 { bottom: 0; left: 50%; transform: translateX(-50%); width: 200px; }
+
     .services-grid { grid-template-columns: repeat(2, 1fr); }
     .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
     .case-studies-grid, .pricing-grid { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
@@ -868,6 +908,11 @@ body:not(.dark-theme) .footer {
 @media (min-width: 992px) {
     .hero-title { font-size: 4rem; }
     .services-grid, .case-studies-grid, .testimonials-grid { grid-template-columns: repeat(3, 1fr); }
+
+    /* Original positioning for the three demo cards on larger desktops */
+    .card-1 { top: 0; left: 0; width: 260px; }
+    .card-2 { top: 120px; right: 0; width: 220px; }
+    .card-3 { bottom: 0; left: 50%; transform: translateX(-50%); width: 200px; }
 }
 
 @media (min-width: 1200px) {
